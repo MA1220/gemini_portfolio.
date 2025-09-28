@@ -14,6 +14,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 const AppContent: React.FC = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   
   useEffect(() => {
     const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'resume', 'contact'];
@@ -66,8 +67,8 @@ const AppContent: React.FC = () => {
             <Contact />
           </div>
       </main>
-      <Chatbot />
-      <BackToTopButton show={showBackToTop} />
+      <Chatbot isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
+      <BackToTopButton show={showBackToTop && !isChatbotOpen} />
     </div>
   );
 };

@@ -4,8 +4,12 @@ import { getChatSession } from '../services/geminiService';
 import { ChatMessage, ChatRole } from '../types';
 import { ChatIcon, CloseIcon, SendIcon, UserIcon, BotIcon } from './icons/ChatIcons';
 
-const Chatbot: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+interface ChatbotProps {
+    isOpen: boolean;
+    setIsOpen: (isOpen: boolean) => void;
+}
+
+const Chatbot: React.FC<ChatbotProps> = ({ isOpen, setIsOpen }) => {
     const [messages, setMessages] = useState<ChatMessage[]>([
         { role: ChatRole.MODEL, content: "Hi! I'm Gemi, Maheshwar's AI assistant. Feel free to ask me about his work, or just ask for a tech joke!" }
     ]);
