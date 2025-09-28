@@ -65,52 +65,52 @@ const Chatbot: React.FC = () => {
         <>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 bg-gradient-to-r from-purple-600 to-yellow-500 text-white p-4 rounded-full shadow-lg hover:opacity-90 transition-transform transform hover:scale-110 z-50"
+                className="fixed bottom-6 right-6 bg-gradient-to-r from-[var(--gradient-from)] to-[var(--gradient-to)] text-white p-4 rounded-full shadow-lg hover:opacity-90 transition-transform transform hover:scale-110 z-50"
                 aria-label="Toggle Chatbot"
             >
                 {isOpen ? <CloseIcon className="w-6 h-6" /> : <ChatIcon className="w-6 h-6" />}
             </button>
 
             {isOpen && (
-                <div className="fixed bottom-24 right-6 w-[calc(100%-3rem)] max-w-sm h-[70vh] max-h-[600px] bg-white border border-gray-200 rounded-2xl shadow-2xl flex flex-col z-50">
-                    <header className="bg-gray-50 p-4 rounded-t-2xl flex items-center justify-between border-b border-gray-200">
-                        <h3 className="text-lg font-semibold text-gray-800">Chat with Gemi</h3>
+                <div className="fixed bottom-24 right-6 w-[calc(100%-3rem)] max-w-sm h-[70vh] max-h-[600px] bg-[var(--card-background)] border border-[var(--card-border)] rounded-2xl shadow-2xl flex flex-col z-50 transition-colors duration-300">
+                    <header className="bg-[var(--foreground)] p-4 rounded-t-2xl flex items-center justify-between border-b border-[var(--card-border)]">
+                        <h3 className="text-lg font-semibold text-[var(--text-primary)]">Chat with Gemi</h3>
                     </header>
-                    <div className="flex-1 p-4 overflow-y-auto space-y-4 bg-gray-100">
+                    <div className="flex-1 p-4 overflow-y-auto space-y-4 bg-[var(--background)]">
                         {messages.map((msg, index) => (
                             <div key={index} className={`flex items-start gap-3 ${msg.role === ChatRole.USER ? 'justify-end' : ''}`}>
-                                {msg.role === ChatRole.MODEL && <BotIcon className="w-8 h-8 flex-shrink-0 text-purple-600" />}
-                                <div className={`px-4 py-2 rounded-xl max-w-xs md:max-w-sm break-words ${msg.role === ChatRole.USER ? 'bg-purple-600 text-white rounded-br-none' : 'bg-white text-gray-700 rounded-bl-none shadow-sm'}`}>
+                                {msg.role === ChatRole.MODEL && <BotIcon className="w-8 h-8 flex-shrink-0 text-[var(--accent)]" />}
+                                <div className={`px-4 py-2 rounded-xl max-w-xs md:max-w-sm break-words ${msg.role === ChatRole.USER ? 'bg-[var(--accent)] text-white rounded-br-none' : 'bg-[var(--foreground)] text-[var(--text-primary)] rounded-bl-none shadow-sm'}`}>
                                     {msg.content}
                                 </div>
-                                {msg.role === ChatRole.USER && <UserIcon className="w-8 h-8 flex-shrink-0 text-gray-400" />}
+                                {msg.role === ChatRole.USER && <UserIcon className="w-8 h-8 flex-shrink-0 text-[var(--text-secondary)]" />}
                             </div>
                         ))}
                         {isLoading && (
                              <div className="flex items-start gap-3">
-                                <BotIcon className="w-8 h-8 flex-shrink-0 text-purple-600" />
-                                <div className="px-4 py-3 bg-white rounded-xl rounded-bl-none shadow-sm">
+                                <BotIcon className="w-8 h-8 flex-shrink-0 text-[var(--accent)]" />
+                                <div className="px-4 py-3 bg-[var(--foreground)] rounded-xl rounded-bl-none shadow-sm">
                                     <div className="flex items-center space-x-1">
-                                        <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-0"></span>
-                                        <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-200"></span>
-                                        <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-400"></span>
+                                        <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse delay-0"></span>
+                                        <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse delay-200"></span>
+                                        <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse delay-400"></span>
                                     </div>
                                 </div>
                             </div>
                         )}
                         <div ref={messagesEndRef} />
                     </div>
-                    <form onSubmit={handleSendMessage} className="p-4 border-t border-gray-200">
-                        <div className="flex items-center bg-gray-100 rounded-full pr-2">
+                    <form onSubmit={handleSendMessage} className="p-4 border-t border-[var(--card-border)]">
+                        <div className="flex items-center bg-[var(--input-background)] rounded-full pr-2">
                             <input
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 placeholder="Ask me anything..."
                                 disabled={isLoading}
-                                className="w-full bg-transparent text-gray-800 placeholder-gray-500 focus:outline-none px-4 py-2"
+                                className="w-full bg-transparent text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none px-4 py-2"
                             />
-                            <button type="submit" disabled={isLoading || !input.trim()} className="p-2 bg-purple-600 rounded-full disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-purple-700 transition-colors">
+                            <button type="submit" disabled={isLoading || !input.trim()} className="p-2 bg-[var(--accent)] rounded-full disabled:bg-gray-400 disabled:cursor-not-allowed hover:opacity-90 transition-colors">
                                 <SendIcon className="w-5 h-5 text-white" />
                             </button>
                         </div>

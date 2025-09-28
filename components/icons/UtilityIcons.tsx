@@ -22,3 +22,24 @@ export const EyeIcon: React.FC<IconProps> = (props) => (
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
     </svg>
 );
+
+export const MenuIcon: React.FC<IconProps> = (props) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+);
+
+export const CloseIcon: React.FC<IconProps> = (props) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+);
+
+export const ThemeIcon: React.FC<IconProps> = (props) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402a3.75 3.75 0 00-5.304-5.304L4.098 14.6c-1.452 1.451-1.452 3.853 0 5.304z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 12.75L15 9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l-3.75-3.75" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 21v-3.75m0 0A3.75 3.75 0 019.75 12h3.75m0 0A3.75 3.75 0 0117.25 6v-3.75m0 0A3.75 3.75 0 0013.5 6h-3.75m0 0A3.75 3.75 0 006 9.75v3.75" />
+    </svg>
+);

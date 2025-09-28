@@ -16,7 +16,7 @@ const BackToTopButton: React.FC<BackToTopButtonProps> = ({ show }) => {
     return (
         <button
             onClick={handleClick}
-            className={`fixed bottom-24 right-6 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition-opacity duration-300 ${show ? 'opacity-100' : 'opacity-0'} z-50`}
+            className={`fixed bottom-24 right-6 bg-[var(--gradient-to)] text-white p-3 rounded-full shadow-lg hover:opacity-80 transition-opacity duration-300 ${show ? 'opacity-100' : 'opacity-0'} z-50`}
             aria-label="Back to top"
             style={{ visibility: show ? 'visible' : 'hidden' }}
         >
