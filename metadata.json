@@ -1,0 +1,5 @@
+{
+  "name": "Gemini AI Portfolio Chatbot",
+  "description": "A personal portfolio website enhanced with a Gemini-powered AI chatbot. The chatbot can answer questions about the portfolio owner, their projects, skills, and also provides tech news, insights, and jokes.",
+  "requestFramePermissions": []
+}
