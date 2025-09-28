@@ -135,13 +135,13 @@ export const PROJECTS: Project[] = [
     title: 'Enhanced MyJio App Search',
     description: 'Architected a distributed search backend for the MyJio app using Spring Boot, ELK, and Docker. Handled 1000+ QPS with sub-100ms latency and implemented a custom sorting algorithm to improve relevance and engagement.',
     technologies: ['Java', 'Spring Boot', 'Elasticsearch', 'ELK Stack', 'Docker', 'Microservices'],
-    imageUrl: '/components/icons/myjioApp.jpg',
+    imageUrl: "/images/myjioApp.jpg",
   },
   {
     title: 'Search API for Jio Financial App',
     description: 'Developed scalable Elasticsearch-based search APIs with Spring WebClient, secure authentication, and resilient infrastructure. Optimized endpoints to support 1000+ QPS ensuring smooth UX and reliability under load.',
     technologies: ['Spring WebClient', 'Elasticsearch', 'GCP', 'Java', 'Spring Security', 'Docker'],
-    imageUrl: '/components/icons/jfs.jpg',
+    imageUrl: "/images/jfs.jpg",
   }
 ];
 
@@ -151,11 +151,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
         url: PORTFOLIO_DATA.linkedin,
         icon: LinkedinIcon
     },
-    {
-        name: 'GitHub',
-        url: PORTFOLIO_DATA.github,
-        icon: GithubIcon
-    },
+    // {
+    //     name: 'GitHub',
+    //     url: PORTFOLIO_DATA.github,
+    //     icon: GithubIcon
+    // },
     {
         name: 'Email',
         url: `mailto:${PORTFOLIO_DATA.email}`,

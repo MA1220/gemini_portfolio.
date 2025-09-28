@@ -226,7 +226,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-[var(--card-border)] text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} {PORTFOLIO_DATA.name}. Made with ❤️ & React & Tailwind CSS</p>
+          <p>&copy; {new Date().getFullYear()} {PORTFOLIO_DATA.name}. Made with ❤️ & Google AI Studio</p>
         </div>
       </footer>
     </section>
