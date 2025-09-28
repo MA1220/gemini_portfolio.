@@ -3,7 +3,7 @@ import { PORTFOLIO_DATA, SOCIAL_LINKS } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative text-center py-24 sm:py-32 lg:py-40 bg-[var(--foreground)] overflow-hidden transition-colors duration-300">
+    <section id="hero" className="relative text-center py-24 sm:py-32 lg:py-40 bg-[var(--foreground)] overflow-hidden">
         <div className="absolute inset-0 bg-grid-[var(--card-border)]/[0.4] [mask-image:linear-gradient(to_bottom,white_5%,transparent_90%)]"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div 
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                 </a>
                 <a 
                     href="#contact" 
-                    className="px-6 py-3 bg-[var(--card-background)] text-[var(--text-primary)] font-semibold rounded-md shadow-md border border-[var(--card-border)] hover:bg-[var(--background)] transition-colors"
+                    className="px-6 py-3 bg-[var(--btn-secondary-bg)] text-[var(--btn-secondary-fg)] font-semibold rounded-md shadow-md border border-[var(--btn-secondary-border)] hover:bg-[var(--btn-secondary-hover-bg)] transition-colors"
                 >
                     Get In Touch
                 </a>

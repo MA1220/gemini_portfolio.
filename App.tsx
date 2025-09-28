@@ -9,43 +9,12 @@ import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
 import BackToTopButton from './components/BackToTopButton';
-import { Theme } from './types';
+import { ThemeProvider } from './contexts/ThemeContext';
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-  const [theme, rawSetTheme] = useState<Theme>('system');
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') as Theme | null;
-    if (storedTheme) {
-      rawSetTheme(storedTheme);
-    }
-  }, []);
-
-  const setTheme = (newTheme: Theme) => {
-    rawSetTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
   
-  useEffect(() => {
-    const root = window.document.documentElement;
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const currentTheme = theme === 'system' ? (isDark ? 'dark' : 'light') : theme;
-    
-    root.setAttribute('data-theme', currentTheme);
-
-    if (theme === 'system') {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handleChange = () => {
-            root.setAttribute('data-theme', mediaQuery.matches ? 'dark' : 'light');
-        };
-        mediaQuery.addEventListener('change', handleChange);
-        return () => mediaQuery.removeEventListener('change', handleChange);
-    }
-  }, [theme]);
-
-
   useEffect(() => {
     const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'resume', 'contact'];
     
@@ -84,8 +53,8 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[var(--background)] text-[var(--text-primary)] min-h-screen transition-colors duration-300">
-      <Header activeSection={activeSection} theme={theme} setTheme={setTheme} />
+    <div className="bg-[var(--background)] text-[var(--text-primary)] min-h-screen">
+      <Header activeSection={activeSection} />
       <main>
           <Hero />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,5 +71,14 @@ const App: React.FC = () => {
     </div>
   );
 };
+
+
+const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
 
 export default App;

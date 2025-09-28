@@ -4,7 +4,7 @@ import { DownloadIcon, EyeIcon } from './icons/UtilityIcons';
 
 const Resume: React.FC = () => {
     return (
-        <section id="resume" className="py-20 sm:py-28 bg-[var(--foreground)] scroll-mt-20 transition-colors duration-300">
+        <section id="resume" className="py-20 sm:py-28 bg-[var(--foreground)] scroll-mt-20">
             <div className="text-center mb-16">
                 <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text-primary)]">
                     My <span className="bg-gradient-to-r from-[var(--gradient-from)] to-[var(--gradient-to)] text-transparent bg-clip-text">Resume</span>
@@ -55,7 +55,7 @@ const Resume: React.FC = () => {
                     </a>
                     <a 
                         href="#"
-                        className="w-full sm:w-auto flex items-center justify-center px-6 py-3 bg-[var(--card-background)] text-[var(--text-primary)] font-semibold rounded-md shadow-md border border-[var(--card-border)] hover:bg-[var(--background)] transition-colors"
+                        className="w-full sm:w-auto flex items-center justify-center px-6 py-3 bg-[var(--btn-secondary-bg)] text-[var(--btn-secondary-fg)] font-semibold rounded-md shadow-md border border-[var(--btn-secondary-border)] hover:bg-[var(--btn-secondary-hover-bg)] transition-colors"
                     >
                        <EyeIcon className="w-5 h-5 mr-2" /> View Online
                     </a>

@@ -14,6 +14,9 @@
         font-family: 'Poppins', sans-serif;
         background-color: var(--background);
       }
+      *, ::before, ::after {
+        transition: background-color .3s, color .3s, border-color .3s;
+      }
 
       /* --- DEFAULT THEMES --- */
       :root, [data-theme="light"] {
@@ -32,6 +35,10 @@
         --shadow-color: rgba(0, 0, 0, 0.05);
         --highlight-background: #f1e4ff;
         --highlight-text: #8a4baf;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: var(--background);
       }
 
       [data-theme="dark"] {
@@ -50,6 +57,10 @@
         --shadow-color: rgba(255, 255, 255, 0.05);
         --highlight-background: #37294d;
         --highlight-text: #bb86fc;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: var(--background);
       }
 
       /* --- JIO ECOSYSTEM --- */
@@ -69,6 +80,10 @@
         --shadow-color: rgba(0, 120, 255, 0.1);
         --highlight-background: #e6f2ff;
         --highlight-text: #0078ff;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: var(--background);
       }
 
       [data-theme="jiofinance"] {
@@ -87,6 +102,10 @@
         --shadow-color: rgba(46, 133, 64, 0.1);
         --highlight-background: #e6f9ea;
         --highlight-text: #2e8540;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: var(--background);
       }
       
       [data-theme="jiosaavn"] {
@@ -105,6 +124,10 @@
         --shadow-color: rgba(43, 197, 180, 0.1);
         --highlight-background: #1d3c38;
         --highlight-text: #2bc5b4;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: var(--background);
       }
 
       [data-theme="jiohotstar"] {
@@ -123,6 +146,10 @@
         --shadow-color: rgba(31, 128, 224, 0.1);
         --highlight-background: #132c4d;
         --highlight-text: #1f80e0;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: var(--background);
       }
 
       /* --- META ECOSYSTEM --- */
@@ -142,6 +169,10 @@
         --shadow-color: rgba(0, 0, 0, 0.1);
         --highlight-background: #e7f3ff;
         --highlight-text: #1877f2;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #e4e6eb;
       }
 
       [data-theme="instagram"] {
@@ -160,6 +191,10 @@
         --shadow-color: rgba(0, 0, 0, 0.1);
         --highlight-background: #fce4ec;
         --highlight-text: #d62976;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #efefef;
       }
       
       [data-theme="whatsapp"] {
@@ -178,6 +213,10 @@
         --shadow-color: rgba(0, 0, 0, 0.1);
         --highlight-background: #dcf8c6;
         --highlight-text: #075e54;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f0f0f0;
       }
 
       [data-theme="messenger"] {
@@ -196,6 +235,10 @@
         --shadow-color: rgba(0, 132, 255, 0.1);
         --highlight-background: #e7f3ff;
         --highlight-text: #0084ff;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #e4e6eb;
       }
 
       /* --- GOOGLE ECOSYSTEM --- */
@@ -215,6 +258,10 @@
         --shadow-color: rgba(0, 0, 0, 0.1);
         --highlight-background: #e8f0fe;
         --highlight-text: #1967d2;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f1f3f4;
       }
       
       [data-theme="gmail"] {
@@ -233,6 +280,10 @@
         --shadow-color: rgba(0, 0, 0, 0.08);
         --highlight-background: #fce8e6;
         --highlight-text: #c5221f;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f1f3f4;
       }
       
       [data-theme="googledrive"] {
@@ -251,6 +302,10 @@
         --shadow-color: rgba(0, 0, 0, 0.08);
         --highlight-background: #e6f4ea;
         --highlight-text: #1e8e3e;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f1f3f4;
       }
       
       [data-theme="googledocs"] {
@@ -269,6 +324,10 @@
         --shadow-color: rgba(0, 0, 0, 0.08);
         --highlight-background: #e8f0fe;
         --highlight-text: #1967d2;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f1f3f4;
       }
       
       [data-theme="googlesheets"] {
@@ -287,6 +346,10 @@
         --shadow-color: rgba(0, 0, 0, 0.08);
         --highlight-background: #e6f4ea;
         --highlight-text: #0f9d58;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f1f3f4;
       }
       
       [data-theme="googleslides"] {
@@ -305,6 +368,10 @@
         --shadow-color: rgba(0, 0, 0, 0.08);
         --highlight-background: #feefc3;
         --highlight-text: #f29900;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f1f3f4;
       }
 
       [data-theme="youtube"] {
@@ -323,6 +390,10 @@
         --shadow-color: rgba(0, 0, 0, 0.1);
         --highlight-background: #ffebes;
         --highlight-text: #ff0000;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f2f2f2;
       }
 
       /* --- OTHER TECH --- */
@@ -342,6 +413,10 @@
         --shadow-color: rgba(0, 0, 0, 0.1);
         --highlight-background: #fff3e0;
         --highlight-text: #ff9900;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f3f3f3;
       }
 
       [data-theme="primevideo"] {
@@ -360,6 +435,10 @@
         --shadow-color: rgba(0, 168, 225, 0.1);
         --highlight-background: #002d3d;
         --highlight-text: #00a8e1;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #1a242f;
       }
 
       [data-theme="aws"] {
@@ -378,6 +457,10 @@
         --shadow-color: rgba(255, 153, 0, 0.1);
         --highlight-background: #4a4132;
         --highlight-text: #ff9900;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #3c4f62;
       }
 
       /* --- BANKING --- */
@@ -397,6 +480,10 @@
         --shadow-color: rgba(234, 100, 33, 0.1);
         --highlight-background: #fef0e8;
         --highlight-text: #ea6421;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f0f0f0;
       }
       
       [data-theme="hdfcbank"] {
@@ -415,6 +502,10 @@
         --shadow-color: rgba(0, 51, 102, 0.1);
         --highlight-background: #e8f0f7;
         --highlight-text: #003366;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f0f0f0;
       }
 
       /* --- FINTECH --- */
@@ -434,6 +525,10 @@
         --shadow-color: rgba(0, 208, 156, 0.1);
         --highlight-background: #e6fcf6;
         --highlight-text: #00d09c;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f3f4f6;
       }
       
       [data-theme="zerodhakite"] {
@@ -452,6 +547,10 @@
         --shadow-color: rgba(56, 126, 209, 0.1);
         --highlight-background: #f0f5fc;
         --highlight-text: #387ed1;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f3f4f6;
       }
       
       [data-theme="upstox"] {
@@ -470,6 +569,10 @@
         --shadow-color: rgba(92, 60, 255, 0.1);
         --highlight-background: #332f63;
         --highlight-text: #8b5cf6;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #303650;
       }
       
       /* --- AI THEMES --- */
@@ -489,6 +592,10 @@
         --shadow-color: rgba(137, 179, 249, 0.1);
         --highlight-background: #1e204d;
         --highlight-text: #89b3f9;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #1a1c33;
       }
       
       [data-theme="openai"] {
@@ -507,6 +614,10 @@
         --shadow-color: rgba(16, 163, 127, 0.1);
         --highlight-background: #e7f6f2;
         --highlight-text: #10a37f;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #f3f3f3;
       }
 
       /* --- DEV PALETTES --- */
@@ -526,6 +637,10 @@
         --shadow-color: rgba(0, 0, 0, 0.2);
         --highlight-background: #001f27;
         --highlight-text: #268bd2;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #002b36;
       }
       
       [data-theme="nord"] {
@@ -544,6 +659,10 @@
         --shadow-color: rgba(0, 0, 0, 0.2);
         --highlight-background: #434c5e;
         --highlight-text: #88c0d0;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #434c5e;
       }
       
       [data-theme="dracula"] {
@@ -562,6 +681,10 @@
         --shadow-color: rgba(0, 0, 0, 0.2);
         --highlight-background: #44475a;
         --highlight-text: #ff79c6;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #44475a;
       }
 
       /* --- FUTURISTIC/CREATIVE --- */
@@ -581,6 +704,10 @@
         --shadow-color: rgba(255, 0, 255, 0.2);
         --highlight-background: #2c002c;
         --highlight-text: #ff00ff;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #222;
       }
       
       [data-theme="synthwaveai"] {
@@ -599,6 +726,10 @@
         --shadow-color: rgba(255, 106, 193, 0.15);
         --highlight-background: #493b70;
         --highlight-text: #ff6ac1;
+        --btn-secondary-bg: var(--card-background);
+        --btn-secondary-fg: var(--text-primary);
+        --btn-secondary-border: var(--card-border);
+        --btn-secondary-hover-bg: #3a2e5a;
       }
     </style>
   <script type="importmap">
