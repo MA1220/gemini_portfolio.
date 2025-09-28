@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
 
           <div className="flex items-center space-x-2">
             <a 
-                href="/Maheshwar_Awale_Resume.pdf" 
+                href="https://drive.google.com/file/d/1iSqfkKcquzr1Tg3w-LgPe3Ud86ytUmnK/view?usp=drive_link" 
                 download="Maheshwar_Awale_Resume.pdf"
                 className="hidden sm:flex items-center px-4 py-2 bg-gradient-to-r from-[var(--gradient-from)] to-[var(--gradient-to)] text-white text-sm font-semibold rounded-md shadow-sm hover:opacity-90 transition-opacity"
             >

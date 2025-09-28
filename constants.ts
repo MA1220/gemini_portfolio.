@@ -135,13 +135,13 @@ export const PROJECTS: Project[] = [
     title: 'Enhanced MyJio App Search',
     description: 'Architected a distributed search backend for the MyJio app using Spring Boot, ELK, and Docker. Handled 1000+ QPS with sub-100ms latency and implemented a custom sorting algorithm to improve relevance and engagement.',
     technologies: ['Java', 'Spring Boot', 'Elasticsearch', 'ELK Stack', 'Docker', 'Microservices'],
-    imageUrl: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1964&auto=format&fit=crop',
+    imageUrl: '/components/icons/myjioApp.jpg',
   },
   {
     title: 'Search API for Jio Financial App',
     description: 'Developed scalable Elasticsearch-based search APIs with Spring WebClient, secure authentication, and resilient infrastructure. Optimized endpoints to support 1000+ QPS ensuring smooth UX and reliability under load.',
     technologies: ['Spring WebClient', 'Elasticsearch', 'GCP', 'Java', 'Spring Security', 'Docker'],
-    imageUrl: 'https://images.unsplash.com/photo-1556742044-538a7c2f6943?q=80&w=1964&auto=format&fit=crop',
+    imageUrl: '/components/icons/jfs.jpg',
   }
 ];
 

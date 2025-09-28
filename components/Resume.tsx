@@ -47,14 +47,14 @@ const Resume: React.FC = () => {
 
                 <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a 
-                        href="/Maheshwar_Awale_Resume.pdf" 
+                        href="https://drive.google.com/file/d/1iSqfkKcquzr1Tg3w-LgPe3Ud86ytUmnK/view?usp=drive_link" 
                         download="Maheshwar_Awale_Resume.pdf"
                         className="w-full sm:w-auto flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[var(--gradient-from)] to-[var(--gradient-to)] text-white font-semibold rounded-md shadow-md hover:opacity-90 transition-opacity"
                     >
                        <DownloadIcon className="w-5 h-5 mr-2" /> Download Resume
                     </a>
                     <a 
-                        href="#"
+                        href="https://drive.google.com/file/d/1iSqfkKcquzr1Tg3w-LgPe3Ud86ytUmnK/view?usp=drive_link"
                         className="w-full sm:w-auto flex items-center justify-center px-6 py-3 bg-[var(--btn-secondary-bg)] text-[var(--btn-secondary-fg)] font-semibold rounded-md shadow-md border border-[var(--btn-secondary-border)] hover:bg-[var(--btn-secondary-hover-bg)] transition-colors"
                     >
                        <EyeIcon className="w-5 h-5 mr-2" /> View Online
